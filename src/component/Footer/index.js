@@ -1,15 +1,17 @@
-import "./Footer.css"
+import s from "./Footer.module.css";
+import Container from "../Container/Container";
+
 
 const Footer = () =>{
     return (
-            <footer className="root">
-                <div className="container">
-                    <div className="footerWrap">
+            <footer className={s.root}>
+                <Container>
+                    <div className={s.footerWrap}>
                         Coded with
-                        <span className="heart"></span>
+                        <span className={s.heart}></span>
                         by You
                     </div>
-                </div>
+                </Container>
             </footer>
         )
 }
