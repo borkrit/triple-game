@@ -1,21 +1,25 @@
-import "./Header.css"
+import s from "./Header.module.css";
+import logoPng from "../../assets/logo.png";
+import Container from "../Container/Container";
 
 const MENU = ['Menu 1', 'Menu 2', 'Menu 3', 'Menu 4'];
 
 const Header = () =>{
     
     return (
-            <header className="root">
-                <div className="header">
-                    <div className="container">
-                    <div className="logo"></div>
-                    <ul className="nav">
-                        {
-                            MENU.map((item)=><li key={item} ><a href="#">{item}</a></li>)
-                        }
-                        
-                    </ul>
-                    </div>
+            <header className={s.root}>
+                <div className={s.header}>
+                    <Container className={s.headerWrap} >
+                        <div className={s.logo}>
+                            {/* <img src={logoPng} alt="Logo" /> */}
+                        </div>
+                        <ul className={s.nav}>
+                            {
+                                MENU.map((item)=><li key={item} ><a href="#">{item}</a></li>)
+                            }
+                            
+                        </ul>
+                    </Container>
                 </div>
             </header>
     )
